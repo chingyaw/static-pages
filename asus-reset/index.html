@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width,initial-scale=1" name="viewport"/>
+        <title>ASUS 筆電重設手冊｜Windows 10 / Windows 7</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                margin: 0;
+                background: #f4f6f9;
+                color: #172638;
+                font: 17px/1.72 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft JhengHei",sans-serif;
+            }
+
+            a {
+                color: #155d9d;
+            }
+
+            a:hover {
+                text-decoration-thickness: 2px;
+            }
+
+            a:focus-visible,button:focus-visible,input:focus-visible {
+                outline: 3px solid #0078d4;
+                outline-offset: 3px;
+            }
+
+            aside {
+                position: fixed;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 280px;
+                background: #142b43;
+                color: #e4edf5;
+                padding: 27px 18px 20px;
+                overflow-y: auto;
+                z-index: 5;
+            }
+
+            .brand {
+                padding: 0 10px 20px;
+                border-bottom: 1px solid #ffffff28;
+            }
+
+            .brand strong {
+                display: block;
+                font-size: 21px;
+                color: #fff;
+                line-height: 1.4;
+            }
+
+            .brand small {
+                display: block;
+                color: #b6cadc;
+                margin-top: 6px;
+                font-size: 13px;
+            }
+
+            .nav-heading {
+                font-size: 12px;
+                color: #a8bed1;
+                padding: 20px 11px 6px;
+                letter-spacing: .08em;
+            }
+
+            nav a {
+                display: block;
+                padding: 10px 12px;
+                margin: 3px 0;
+                border-radius: 7px;
+                text-decoration: none;
+                color: #dce8f3;
+                font-size: 15px;
+                line-height: 1.45;
+            }
+
+            nav a.active,nav a:hover {
+                background: #e8f1fb;
+                color: #173e61;
+            }
+
+            nav a span {
+                display: block;
+                font-size: 12px;
+                opacity: .76;
+                margin-top: 3px;
+            }
+
+            .tools {
+                margin-top: 22px;
+                border-top: 1px solid #ffffff28;
+                padding: 17px 10px;
+            }
+
+            .tools p {
+                font-size: 13px;
+                color: #c5d4e1;
+                margin: 0 0 8px;
+            }
+
+            .tools button {
+                font: inherit;
+                font-size: 14px;
+                background: transparent;
+                border: 1px solid #7992ab;
+                color: white;
+                padding: 7px 10px;
+                border-radius: 6px;
+                cursor: pointer;
+                margin: 3px 0;
+                width: 100%;
+            }
+
+            main {
+                margin-left: 280px;
+                max-width: calc(280px + 1140px);
+                padding: 38px 48px 55px;
+            }
+
+            .hero {
+                padding: 0 0 22px;
+                border-bottom: 1px solid #dbe3ec;
+                margin-bottom: 27px;
+            }
+
+            .eyebrow {
+                font-size: 13px;
+                letter-spacing: .1em;
+                font-weight: 700;
+                color: #557188;
+            }
+
+            h1 {
+                font-size: 34px;
+                line-height: 1.35;
+                margin: 8px 0 9px;
+                letter-spacing: -.02em;
+            }
+
+            p {
+                margin: 10px 0;
+            }
+
+            .hero p {
+                color: #526478;
+                font-size: 16px;
+            }
+
+            .section-head {
+                margin-bottom: 19px;
+            }
+
+            h2 {
+                font-size: 28px;
+                line-height: 1.35;
+                margin: 0 0 5px;
+                color: #173e61;
+            }
+
+            .sub {
+                color: #51687c;
+                margin: 5px 0 18px;
+            }
+
+            .section {
+                scroll-margin-top: 20px;
+            }
+
+            .section[hidden] {
+                display: none;
+            }
+
+            .step {
+                background: #fff;
+                border: 1px solid #dce4ed;
+                border-radius: 12px;
+                margin: 17px 0 23px;
+                padding: 24px;
+                box-shadow: 0 2px 5px #11284005;
+            }
+
+            .step-head {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 13px;
+            }
+
+            .step-num {
+                min-width: 45px;
+                height: 36px;
+                padding: 0 9px;
+                border-radius: 7px;
+                background: #e8eff6;
+                color: #254b6f;
+                font-size: 14px;
+                font-weight: 750;
+                display: grid;
+                place-items: center;
+            }
+
+            h3 {
+                margin: 0;
+                font-size: 21px;
+                line-height: 1.4;
+            }
+
+            .path {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 7px;
+                align-items: center;
+                margin: 12px 0 18px;
+            }
+
+            .pathpart {
+                background: #f2f5f8;
+                border: 1px solid #dce4ed;
+                border-radius: 7px;
+                padding: 7px 11px;
+                line-height: 1.35;
+                display: inline-block;
+            }
+
+            .pathpart small,.english {
+                display: block;
+                color: #526a80;
+                font-size: 14px;
+                font-weight: 500;
+                margin-top: 3px;
+            }
+
+            .arrow {
+                color: #617991;
+                font-weight: 700;
+                font-size: 22px;
+            }
+
+            .pick {
+                display: flex;
+                gap: 11px;
+                border-left: 4px solid #14764b;
+                background: #edf7f1;
+                padding: 10px 14px;
+                margin: 10px 0 13px;
+                border-radius: 3px 8px 8px 3px;
+            }
+
+            .pick strong {
+                color: #12613e;
+                font-size: 18px;
+            }
+
+            .pick p {
+                margin: 4px 0 0;
+                font-size: 15px;
+            }
+
+            .tick {
+                color: #14764b;
+                font-size: 22px;
+                font-weight: bold;
+            }
+
+            .avoid {
+                color: #a02b32;
+                background: #fff1f1;
+                padding: 8px 12px;
+                border-left: 4px solid #ad3038;
+                border-radius: 4px;
+                margin: 9px 0;
+            }
+
+            .avoid span[lang] {
+                font-size: 14px;
+            }
+
+            .note,.warning {
+                background: #fff7e7;
+                border-left: 4px solid #b67c23;
+                border-radius: 4px;
+                padding: 12px 16px;
+                margin: 16px 0;
+            }
+
+            .warning {
+                background: #fff1ef;
+                border-color: #b4443c;
+            }
+
+            .shot {
+                margin: 16px 0 22px;
+                max-width: 850px;
+            }
+
+            .image-link {
+                display: block;
+                background: #f2f5f8;
+                border: 1px solid #cbd7e4;
+                border-radius: 8px;
+                overflow: hidden;
+                width: fit-content;
+                max-width: 100%;
+                min-width: min(320px,100%);
+                text-decoration: none;
+            }
+
+            .image-link img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                max-height: 720px;
+                object-fit: contain;
+            }
+
+            .image-link img[hidden],.fallback[hidden] {
+                display: none;
+            }
+
+            .fallback {
+                display: block;
+                padding: 22px;
+                color: #355b80;
+                font-size: 15px;
+                max-width: 640px;
+            }
+
+            .source {
+                color: #536c80;
+                font-size: 13px;
+            }
+
+            .shot figcaption {
+                font-size: 15px;
+                color: #334c61;
+                margin-top: 8px;
+                line-height: 1.5;
+            }
+
+            .missing {
+                border: 1px dashed #b9c8d6;
+                padding: 11px 13px;
+                color: #52687b;
+                border-radius: 7px;
+                font-size: 15px;
+                background: #f7f9fc;
+            }
+
+            .two {
+                display: grid;
+                grid-template-columns: repeat(2,minmax(0,1fr));
+                gap: 19px;
+            }
+
+            .two .image-link {
+                min-width: 0;
+            }
+
+            .check {
+                display: flex;
+                align-items: center;
+                gap: 9px;
+                font-size: 14px;
+                color: #536b7f;
+                border-top: 1px solid #e4eaf0;
+                margin-top: 18px;
+                padding-top: 13px;
+                cursor: pointer;
+            }
+
+            .check input {
+                width: 19px;
+                height: 19px;
+                accent-color: #14764b;
+                margin: 0;
+            }
+
+            .step.done {
+                border-color: #a4c8b5;
+            }
+
+            .cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .route {
+                display: block;
+                border: 1px solid #b9cbe0;
+                border-radius: 9px;
+                padding: 13px;
+                background: #f6f9fc;
+                text-decoration: none;
+            }
+
+            .route b {
+                display: block;
+                font-size: 19px;
+            }
+
+            .route span {
+                display: block;
+                font-size: 14px;
+                color: #52687b;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                font-size: 15px;
+                margin: 12px 0;
+            }
+
+            th,td {
+                padding: 11px 10px;
+                text-align: left;
+                vertical-align: top;
+                border-bottom: 1px solid #dce4ec;
+                overflow-wrap: anywhere;
+            }
+
+            th {
+                background: #edf2f7;
+                color: #2e4a63;
+            }
+
+            .good {
+                color: #14764b;
+                font-weight: 750;
+            }
+
+            .nextline {
+                margin-top: 25px;
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            .next {
+                display: inline-block;
+                background: #1b527f;
+                color: #fff;
+                padding: 10px 15px;
+                text-decoration: none;
+                border-radius: 7px;
+                font-size: 15px;
+            }
+
+            .next.secondary {
+                background: #e4edf5;
+                color: #1b527f;
+            }
+
+            .source-list li {
+                margin: 8px 0;
+            }
+
+            kbd {
+                border: 1px solid #a9bbc9;
+                padding: 2px 8px;
+                border-radius: 5px;
+                background: #fff;
+                font: bold 18px/1.4 inherit;
+            }
+
+            .footer {
+                border-top: 1px solid #dce4ed;
+                margin-top: 32px;
+                padding-top: 15px;
+                font-size: 13px;
+                color: #63788a;
+            }
+
+            .mobile-head {
+                display: none;
+            }
+
+            @media(max-width:820px) {
+                aside {
+                    width: 220px;
+                    padding: 20px 11px;
+                }
+                main {
+                    margin-left: 220px;
+                    padding: 25px 22px;
+                }
+                .two,.cards {
+                    grid-template-columns: 1fr;
+                }
+                h1 {
+                    font-size: 28px;
+                }
+            }
+
+            @media(max-width:580px) {
+                aside {
+                    position: relative;
+                    width: auto;
+                    max-height: none;
+                    padding: 15px;
+                }
+                .brand {
+                    padding-bottom: 10px;
+                }
+                nav {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 3px;
+                }
+                .nav-heading {
+                    grid-column: 1/-1;
+                    padding-top: 10px;
+                }
+                nav a {
+                    font-size: 14px;
+                    padding: 7px;
+                }
+                .tools {
+                    display: none;
+                }
+                main {
+                    margin-left: 0;
+                    padding: 19px 12px;
+                }
+                .step {
+                    padding: 16px;
+                }
+                h2 {
+                    font-size: 24px;
+                }
+                h3 {
+                    font-size: 18px;
+                }
+                .hero {
+                    margin-bottom: 18px;
+                }
+                table {
+                    font-size: 13px;
+                }
+                th,td {
+                    padding: 7px 6px;
+                }
+            }
+
+            @media print {
+                aside {
+                    display: none;
+                }
+                main {
+                    margin: 0;
+                    max-width: none;
+                    padding: 0;
+                }
+                .section[hidden] {
+                    display: block!important;
+                }
+                .section {
+                    break-before: page;
+                }
+                .section:first-of-type {
+                    break-before: auto;
+                }
+                .step {
+                    box-shadow: none;
+                    border: 0;
+                    padding: 5px 0;
+                }
+                .shot,.note,.warning,.pick,.step-head,table tr {
+                    break-inside: avoid;
+                }
+                h3 {
+                    break-after: avoid;
+                }
+                .image-link img {
+                    max-height: 420px;
+                }
+                .nextline,.check {
+                    display: none;
+                }
+                body {
+                    background: #fff;
+                    font-size: 12pt;
+                }
+                .source {
+                    font-size: 9pt;
+                }
+                .hero {
+                    padding: 0 0 10px;
+                }
+                .two {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+
+            :root {
+                --sidebar: 318px;
+                --blue: #174f9b;
+                --blue-light: #e5efff;
+                --green: #236747;
+                --green-light: #e2f4e9;
+                --ink: #172433;
+                --paper: #f3f5f8;
+            }
+
+            body {
+                background: var(--paper);
+                color: var(--ink);
+                font-size: 18px;
+                line-height: 1.7;
+            }
+
+            aside {
+                width: var(--sidebar);
+                background: #fff;
+                color: var(--ink);
+                border-right: 1px solid #cfd8e3;
+                padding: 26px 17px 20px;
+                box-shadow: 4px 0 18px #243b5510;
+            }
+
+            .brand {
+                padding: 0 11px 20px;
+                border-bottom: 1px solid #d9e0e8;
+            }
+
+            .brand strong {
+                color: #152b42;
+                font-size: 23px;
+                font-weight: 750;
+            }
+
+            .brand small {
+                color: #53677d;
+                font-size: 13px;
+                margin-top: 3px;
+            }
+
+            nav {
+                display: block;
+                padding-top: 18px;
+            }
+
+            .nav-group {
+                display: block;
+                border: 1px solid #dce3eb;
+                border-radius: 10px;
+                overflow: hidden;
+                margin: 0 0 16px;
+                padding: 0 0 5px;
+                background: #f3f5f8;
+            }
+
+            .nav-heading {
+                font-size: 15px;
+                font-weight: 750;
+                line-height: 1.3;
+                color: #3d5064;
+                padding: 11px 12px;
+                letter-spacing: 0;
+                background: #e5eaf0;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .nav-group.w10 {
+                background: var(--blue-light);
+                border-color: #9ebce8;
+            }
+
+            .nav-group.w7 {
+                background: var(--green-light);
+                border-color: #a3cbb4;
+            }
+
+            .w10 .nav-heading,.w7 .nav-heading {
+                font-size: 24px;
+                font-weight: 750;
+                color: #fff;
+                padding: 13px 15px;
+                letter-spacing: -.025em;
+            }
+
+            .w10 .nav-heading {
+                background: var(--blue);
+            }
+
+            .w7 .nav-heading {
+                background: var(--green);
+            }
+
+            .os-icon {
+                width: 21px;
+                height: 21px;
+                display: inline-block;
+                background: linear-gradient(to right,transparent 46%,#ffffff00 46% 54%,transparent 54%),#fff;
+                position: relative;
+                flex: none;
+            }
+
+            .os-icon:before,.os-icon:after {
+                content: '';
+                position: absolute;
+                background: var(--blue);
+            }
+
+            .os-icon:before {
+                width: 3px;
+                height: 100%;
+                left: 9px;
+            }
+
+            .os-icon:after {
+                height: 3px;
+                width: 100%;
+                top: 9px;
+            }
+
+            .w7 .os-icon:before,.w7 .os-icon:after {
+                background: var(--green);
+            }
+
+            nav a {
+                color: #263b50;
+                padding: 12px 11px;
+                margin: 5px 6px;
+                border-radius: 7px;
+                border: 1px solid transparent;
+                font-size: 15px;
+                line-height: 1.45;
+                display: block;
+            }
+
+            nav a b {
+                display: inline-block;
+                font-size: 12px;
+                font-weight: 750;
+                margin-right: 4px;
+                color: inherit;
+                opacity: .85;
+            }
+
+            nav a span {
+                font-size: 13px;
+                color: inherit;
+                margin-top: 4px;
+                opacity: .86;
+                padding-left: 0;
+            }
+
+            nav a:hover {
+                background: #fff;
+                color: #173e61;
+                border-color: #c7d6e7;
+            }
+
+            nav a.active {
+                background: #253d55;
+                color: #fff;
+                border-color: #253d55;
+                box-shadow: 0 2px 5px #1f36591c;
+                font-weight: 700;
+            }
+
+            .w10 a {
+                color: #164478;
+            }
+
+            .w7 a {
+                color: #205b3d;
+            }
+
+            .w10 a.active {
+                background: var(--blue);
+                border-color: var(--blue);
+                color: #fff;
+            }
+
+            .w7 a.active {
+                background: var(--green);
+                border-color: var(--green);
+                color: #fff;
+            }
+
+            .end-group {
+                background: transparent;
+                border: 0;
+                margin-bottom: 0;
+                padding: 0;
+            }
+
+            .end-group a {
+                margin: 4px 0;
+                padding: 10px 12px;
+            }
+
+            .end-group a:last-child {
+                font-size: 14px;
+                color: #53677d;
+            }
+
+            .end-group a:last-child.active {
+                color: #fff;
+            }
+
+            .tools {
+                padding: 12px 4px 0;
+                margin: 12px 0 0;
+                border-top: 1px solid #d9e0e8;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 6px;
+            }
+
+            .tools p {
+                grid-column: 1/-1;
+                font-size: 13px;
+                color: #4b6175;
+                padding: 0 4px;
+                margin-bottom: 1px;
+            }
+
+            .tools button {
+                font-size: 13px;
+                border: 1px solid #c4cfdb;
+                background: #f7f9fb;
+                color: #243c53;
+                white-space: nowrap;
+            }
+
+            .tools button:hover {
+                background: #e7edf4;
+            }
+
+            main {
+                margin-left: var(--sidebar);
+                max-width: calc(var(--sidebar) + 1150px);
+                padding: 32px 44px 60px;
+            }
+
+            .section-head {
+                padding: 19px 24px;
+                background: #e4eaf1;
+                border: 1px solid #d5dee8;
+                border-radius: 12px;
+                margin: 0 0 23px;
+            }
+
+            .section-head h2 {
+                color: #1c344c;
+                font-size: 30px;
+                margin: 0;
+                line-height: 1.35;
+            }
+
+            .section-head .sub {
+                margin: 7px 0 0;
+                color: #40586f;
+                font-size: 16px;
+            }
+
+            .os10 .section-head {
+                background: var(--blue-light);
+                border-color: #a9c5ec;
+                border-left: 6px solid var(--blue);
+            }
+
+            .os7 .section-head {
+                background: var(--green-light);
+                border-color: #a9cdb7;
+                border-left: 6px solid var(--green);
+            }
+
+            .section-os {
+                font-size: 17px;
+                font-weight: 800;
+                margin-bottom: 7px;
+                color: var(--blue);
+            }
+
+            .section-os span {
+                font-weight: 600;
+                font-size: 15px;
+            }
+
+            .os7 .section-os,.os7 .section-head h2 {
+                color: #205b3d;
+            }
+
+            .os10 .section-head h2 {
+                color: #164478;
+            }
+
+            .step {
+                padding: 25px 28px;
+                margin: 0 0 22px;
+                border-radius: 12px;
+                box-shadow: 0 2px 7px #21364e08;
+            }
+
+            .step-head {
+                gap: 14px;
+            }
+
+            .step-num {
+                background: #e2e9f0;
+                color: #203d56;
+                min-width: 52px;
+                height: 38px;
+                font-size: 15px;
+            }
+
+            .os10 .step-num {
+                background: var(--blue);
+                color: #fff;
+            }
+
+            .os7 .step-num {
+                background: var(--green);
+                color: #fff;
+            }
+
+            h3 {
+                font-size: 22px;
+            }
+
+            .pathpart {
+                background: #f0f4f8;
+                color: #1c3248;
+                font-size: 17px;
+            }
+
+            .pathpart small,.english {
+                font-size: 15px;
+                color: #43596d;
+            }
+
+            .pick {
+                background: #e6f5ec;
+            }
+
+            .avoid {
+                background: #fff0ed;
+                color: #a02b32;
+            }
+
+            .shot {
+                margin: 15px 0 20px;
+            }
+
+            .shot figcaption {
+                font-size: 15px;
+            }
+
+            .source {
+                font-size: 12px;
+            }
+
+            .fallback {
+                padding: 14px;
+                font-size: 14px;
+            }
+
+            .missing {
+                font-size: 14px;
+                background: #f7f9fc;
+            }
+
+            .check {
+                font-size: 15px;
+            }
+
+            .next {
+                background: #253d55;
+                font-weight: 650;
+            }
+
+            .os10 .next {
+                background: var(--blue);
+            }
+
+            .os7 .next {
+                background: var(--green);
+            }
+
+            .next.secondary {
+                background: #e4eaf0;
+                color: #263b50;
+            }
+
+            .route10,.next.route10 {
+                background: var(--blue-light);
+                border: 1px solid #94b6e3;
+                color: #164478;
+            }
+
+            .route7,.next.route7 {
+                background: var(--green-light);
+                border: 1px solid #9cc5ac;
+                color: #205b3d;
+            }
+
+            .route:hover {
+                filter: brightness(.97);
+            }
+
+            .route b {
+                font-size: 22px;
+            }
+
+            .route span {
+                color: inherit;
+            }
+
+            @media(max-width:980px) {
+                :root {
+                    --sidebar: 280px;
+                }
+                aside {
+                    padding: 20px 12px;
+                }
+                main {
+                    padding: 24px 22px;
+                }
+                .step {
+                    padding: 20px;
+                }
+                .w10 .nav-heading,.w7 .nav-heading {
+                    font-size: 22px;
+                }
+                .two {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            @media(max-width:700px) {
+                aside {
+                    position: relative;
+                    width: 100%;
+                    padding: 16px;
+                    border-right: 0;
+                    border-bottom: 1px solid #cfd8e3;
+                    box-shadow: none;
+                }
+                .brand {
+                    padding-bottom: 10px;
+                }
+                nav {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                    padding-top: 12px;
+                }
+                .nav-group {
+                    margin: 0;
+                }
+                .nav-group.common {
+                    grid-column: 1/-1;
+                }
+                .common:not(.end-group),.end-group {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 2px;
+                }
+                .common .nav-heading {
+                    grid-column: 1/-1;
+                }
+                .common a {
+                    font-size: 14px;
+                }
+                .w10 .nav-heading,.w7 .nav-heading {
+                    font-size: 20px;
+                    padding: 10px;
+                }
+                .nav-group a {
+                    padding: 9px 8px;
+                    font-size: 14px;
+                }
+                .tools {
+                    display: none;
+                }
+                main {
+                    margin: 0;
+                    padding: 15px 12px 30px;
+                    max-width: none;
+                }
+                .section-head {
+                    padding: 15px;
+                }
+                .section-head h2 {
+                    font-size: 24px;
+                }
+                .step {
+                    padding: 16px;
+                }
+                .step-head {
+                    gap: 9px;
+                }
+                h3 {
+                    font-size: 19px;
+                }
+                .cards,.two {
+                    grid-template-columns: 1fr;
+                }
+                .pathpart {
+                    font-size: 15px;
+                }
+                .pathpart small {
+                    font-size: 13px;
+                }
+            }
+
+            @media print {
+                aside {
+                    display: none!important;
+                }
+                main {
+                    margin: 0;
+                    padding: 0;
+                    max-width: none;
+                }
+                .section-head {
+                    background: none!important;
+                    border: 0!important;
+                    padding: 4px 0 10px;
+                }
+                .section-head h2 {
+                    font-size: 21pt;
+                }
+                .step {
+                    box-shadow: none;
+                    border: 0;
+                    padding: 5px 0;
+                }
+                .section-os {
+                    font-size: 11pt;
+                }
+                .step-num {
+                    background: #e6e6e6!important;
+                    color: #111!important;
+                }
+                .nextline,.check {
+                    display: none!important;
+                }
+                body {
+                    background: white;
+                    font-size: 12pt;
+                }
+                .step-head {
+                    break-after: avoid;
+                }
+                .shot {
+                    break-inside: avoid;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <aside>
+            <div class="brand">
+                <strong>ASUS 筆電重設手冊</strong>
+                <small>Windows 10 / Windows 7</small>
+            </div>
+            <nav aria-label="操作章節">
+                <div class="nav-group common">
+                    <div class="nav-heading">開始前</div>
+                    <a data-nav="start" href="#start">確認 Windows 版本</a>
+                    <a data-nav="bitlocker" href="#bitlocker">檢查磁碟加密（BitLocker）</a>
+                </div>
+                <div class="nav-group w10">
+                    <div class="nav-heading"><span aria-hidden="true" class="os-icon"></span>Windows 10</div>
+                    <a data-nav="win10" href="#win10"><b>方法一</b> 從設定重設<span>可以正常登入 Windows</span></a>
+                    <a data-nav="win10alt" href="#win10alt"><b>方法二</b> 從修復環境重設<span>無法正常登入 Windows</span></a>
+                </div>
+                <div class="nav-group w7">
+                    <div class="nav-heading"><span aria-hidden="true" class="os-icon"></span>Windows 7</div>
+                    <a data-nav="win7" href="#win7"><b>方法一</b> ASUS 原廠還原<span>開機時按 F9</span></a>
+                    <a data-nav="win7alt" href="#win7alt"><b>方法二</b> 從控制台還原<span>F9 無效時</span></a>
+                </div>
+                <div class="nav-group common end-group">
+                    <a data-nav="finish" href="#finish">完成重設及關機</a>
+                    <a data-nav="sources" href="#sources">參考資料</a>
+                </div>
+            </nav>
+            <div class="tools">
+                <p id="progress">步驟勾選</p>
+                <button id="print" type="button">列印手冊</button>
+                <button id="clear" type="button">清除勾選</button>
+            </div>
+        </aside>
+        <main>
+            <section class="section" id="start">
+                <div class="section-head">
+                    <h2>確認 Windows 版本</h2>
+                    <p class="sub">先確認這台電腦是 Windows 10 還是 Windows 7。</p>
+                </div>
+                <div class="note"><b>全程接上電源。</b> 重設時可能會黑屏、重新開機數次，不要強制關機。</div>
+                <article class="step" id="step-A1">
+                    <div class="step-head">
+                        <span class="step-num">A1</span>
+                        <h3>開啟系統資訊</h3>
+                    </div>
+                    <p>如果看得到桌面，點左下角的開始按鈕，依照其中一條路徑操作。</p>
+                    <div class="path">
+                        <span class="pathpart"><b>開始</b><small lang="en">Start</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>設定</b><small lang="en">Settings</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>系統</b><small lang="en">System</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>關於</b><small lang="en">About</small></span>
+                    </div>
+                    <p>若開始選單沒有「設定」，改走下列 Windows 7 路徑。</p>
+                    <div class="path">
+                        <span class="pathpart"><b>開始</b><small lang="en">Start</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>控制台</b><small lang="en">Control Panel</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>系統及安全性</b><small lang="en">System and Security</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>系統</b><small lang="en">System</small></span>
+                    </div>
+                    <figure class="shot">
+                        <a aria-label="Windows 7 控制台：點選 System and Security（系統及安全性）" class="image-link" href="https://www.top-password.com/blog/wp-content/uploads/2015/01/control-panel1.png" rel="noopener noreferrer" target="_blank"><img alt="Windows 7 控制台：點選 System and Security（系統及安全性）" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://www.top-password.com/blog/wp-content/uploads/2015/01/control-panel1.png"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>Windows 7 控制台：點選 System and Security（系統及安全性）<br/><span class="source">來源：<a href="https://www.top-password.com/blog/how-to-reset-windows-7-to-factory-settings-without-install-disc/" rel="noopener noreferrer" target="_blank">Top Password</a> · <a href="https://www.top-password.com/blog/wp-content/uploads/2015/01/control-panel1.png" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="A1" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-A2">
+                    <div class="step-head">
+                        <span class="step-num">A2</span>
+                        <h3>看 Windows 版本</h3>
+                    </div>
+                    <p>找到 Windows edition（Windows 版本）或 Windows specifications（Windows 規格）。</p>
+                    <div class="cards">
+                        <a class="route route10" href="#bitlocker"><b>Windows 10</b><span>下一步：檢查磁碟加密</span></a>
+                        <a class="route route7" href="#bitlocker"><b>Windows 7</b><span>下一步：檢查磁碟加密</span></a>
+                    </div>
+                    <div class="two">
+                        <figure class="shot">
+                            <a aria-label="Windows 10：About（關於）頁面，Windows specifications 顯示版本" class="image-link" href="https://support.shipshave.no/img/windows-version.png" rel="noopener noreferrer" target="_blank"><img alt="Windows 10：About（關於）頁面，Windows specifications 顯示版本" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://support.shipshave.no/img/windows-version.png"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                            <figcaption>Windows 10：About（關於）頁面，Windows specifications 顯示版本<br/><span class="source">來源：<a href="https://support.shipshave.no/itch-v1/application_manual/itch1_application_manual/" rel="noopener noreferrer" target="_blank">Shipshave Support</a> · <a href="https://support.shipshave.no/img/windows-version.png" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                        </figure>
+                        <figure class="shot">
+                            <a aria-label="Windows 7：System（系統）頁面，Windows edition 顯示版本" class="image-link" href="https://drexel.edu/~/media/Images/it/OS-images/windows7-2.ashx?h=443&amp;hash=592953C729D7CB2FC66ABAC9AAF098185296F784&amp;la=en&amp;w=609" rel="noopener noreferrer" target="_blank"><img alt="Windows 7：System（系統）頁面，Windows edition 顯示版本" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://drexel.edu/~/media/Images/it/OS-images/windows7-2.ashx?h=443&amp;hash=592953C729D7CB2FC66ABAC9AAF098185296F784&amp;la=en&amp;w=609"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                            <figcaption>Windows 7：System（系統）頁面，Windows edition 顯示版本<br/><span class="source">來源：<a href="https://drexel.edu/it/computers-software/operating-systems/find-os-version/" rel="noopener noreferrer" target="_blank">Drexel University</a> · <a href="https://drexel.edu/~/media/Images/it/OS-images/windows7-2.ashx?h=443&amp;hash=592953C729D7CB2FC66ABAC9AAF098185296F784&amp;la=en&amp;w=609" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                        </figure>
+                    </div>
+                    <label class="check"><input data-step="A2" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <p class="nextline"><a class="next" href="#bitlocker">下一步：檢查磁碟加密 ›</a></p>
+            </section>
+            <section class="section" id="bitlocker">
+                <div class="section-head">
+                    <h2>檢查磁碟加密</h2>
+                    <p class="sub">查看加密狀態，不需要變更設定。</p>
+                </div>
+                <article class="step" id="step-B1">
+                    <div class="step-head">
+                        <span class="step-num">B1</span>
+                        <h3>在控制台找到 BitLocker</h3>
+                    </div>
+                    <div class="path">
+                        <span class="pathpart"><b>開始</b><small lang="en">Start</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>控制台</b><small lang="en">Control Panel</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>系統及安全性</b><small lang="en">System and Security</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>BitLocker 磁碟機加密</b><small lang="en">BitLocker Drive Encryption</small></span>
+                    </div>
+                    <p>Windows 10 也可點開始，搜尋「BitLocker」或「管理 BitLocker」（Manage BitLocker），再點搜尋結果。</p>
+                    <figure class="shot">
+                        <a aria-label="Windows 7：BitLocker Drive Encryption 位於 System and Security 頁面" class="image-link" href="https://www.top-password.com/blog/wp-content/uploads/2015/01/system-and-security.png" rel="noopener noreferrer" target="_blank"><img alt="Windows 7：BitLocker Drive Encryption 位於 System and Security 頁面" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://www.top-password.com/blog/wp-content/uploads/2015/01/system-and-security.png"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>Windows 7：BitLocker Drive Encryption 位於 System and Security 頁面。圖中藍色反白為 Backup and Restore；本步請點其下方 BitLocker<br/><span class="source">來源：<a href="https://www.top-password.com/blog/how-to-reset-windows-7-to-factory-settings-without-install-disc/" rel="noopener noreferrer" target="_blank">Top Password</a> · <a href="https://www.top-password.com/blog/wp-content/uploads/2015/01/system-and-security.png" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="B1" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-B2">
+                    <div class="step-head">
+                        <span class="step-num">B2</span>
+                        <h3>判斷是否已開啟</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>畫面英文</th>
+                                <th>中文與判斷</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BitLocker on / Turn off BitLocker</td>
+                                <td>已開啟／關閉 BitLocker：<b>目前已加密</b></td>
+                            </tr>
+                            <tr>
+                                <td>BitLocker off / Turn on BitLocker</td>
+                                <td>已關閉／開啟 BitLocker：<b>目前未啟用</b></td>
+                            </tr>
+                            <tr>
+                                <td>Suspended / Protection suspended</td>
+                                <td>已暫停保護：可能仍有加密</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>查看 C:，以及其他內部磁碟。不要點 Turn on 或 Turn off。</p>
+                    <div class="note">若 Windows 7 Home 找不到此選項，可能是不支援標準 BitLocker 的版本；若是 Windows 10，還要做下一步檢查裝置加密。</div>
+                    <figure class="shot">
+                        <a aria-label="BitLocker 控制台：C: 和 D: 均顯示 BitLocker on" class="image-link" href="https://support.microsoft.com/en-gb/windows/media/bitlocker-drive-encryption.png" rel="noopener noreferrer" target="_blank"><img alt="BitLocker 控制台：C: 和 D: 均顯示 BitLocker on" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://support.microsoft.com/en-gb/windows/media/bitlocker-drive-encryption.png"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>BitLocker 控制台：C: 和 D: 均顯示 BitLocker on。此為 Microsoft 較新版介面，Windows 7 外觀可能不同<br/><span class="source">來源：<a href="https://support.microsoft.com/en-gb/windows/security/encryption/bitlocker-drive-encryption?nochrome=true" rel="noopener noreferrer" target="_blank">Microsoft 官方</a> · <a href="https://support.microsoft.com/en-gb/windows/media/bitlocker-drive-encryption.png" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="B2" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-B3">
+                    <div class="step-head">
+                        <span class="step-num">B3</span>
+                        <h3>Windows 10：額外檢查裝置加密</h3>
+                    </div>
+                    <div class="path">
+                        <span class="pathpart"><b>開始</b><small lang="en">Start</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>設定</b><small lang="en">Settings</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>更新與安全性</b><small lang="en">Update &amp; Security</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>裝置加密</b><small lang="en">Device encryption</small></span>
+                    </div>
+                    <p>顯示 On（開啟）或 Device encryption is on 代表已開啟；Off（關閉）代表未開啟。找不到此頁面時，可能是硬體或版本不支援。不要為了重設而啟用或停用加密。</p>
+                    <figure class="shot">
+                        <a aria-label="Windows 10 裝置加密頁面：Device encryption is off" class="image-link" href="https://www.windowscentral.com/sites/wpcentral.com/files/styles/medium/public/field/image/2019/07/windows-10-home-device-encryption.jpg" rel="noopener noreferrer" target="_blank"><img alt="Windows 10 裝置加密頁面：Device encryption is off" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/medium/public/field/image/2019/07/windows-10-home-device-encryption.jpg"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>Windows 10 裝置加密頁面：Device encryption is off。紅框 Turn on 不需要點選<br/><span class="source">來源：<a href="https://www.windowscentral.com/how-enable-device-encryption-windows-10-home" rel="noopener noreferrer" target="_blank">Windows Central</a> · <a href="https://www.windowscentral.com/sites/wpcentral.com/files/styles/medium/public/field/image/2019/07/windows-10-home-device-encryption.jpg" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="B3" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-B4">
+                    <div class="step-head">
+                        <span class="step-num">B4</span>
+                        <h3>若要求輸入復原金鑰才處理</h3>
+                    </div>
+                    <p>不需要關閉 BitLocker。若重設時沒有要求復原金鑰，直接繼續。</p>
+                    <p>若出現 BitLocker recovery（BitLocker 復原）藍色畫面，請原擁有者用另一台裝置開啟 <a href="https://account.microsoft.com/devices/recoverykey" rel="noopener noreferrer" target="_blank">個人 Microsoft 帳號復原金鑰頁面</a>，比對 Recovery key ID（復原金鑰識別碼），使用相符的 48 位數金鑰。Windows 7 的金鑰也可能存於當初列印或儲存的位置。</p>
+                    <div class="warning">找不到金鑰且畫面無法繼續：停止操作並聯繫原電腦擁有者。可能需要由熟悉電腦的人使用 USB 重新安裝；不要嘗試猜金鑰或更動 BIOS。</div>
+                    <figure class="shot">
+                        <a aria-label="BitLocker 復原畫面：Recovery key ID 與金鑰輸入欄位" class="image-link" href="https://km-ap.asus.com/uploads/PhotoLibrarys/e16a88c8-bcc4-4dcb-bc7f-fe0809f723b5/20250303171543147_bit3a.jpg" rel="noopener noreferrer" target="_blank"><img alt="BitLocker 復原畫面：Recovery key ID 與金鑰輸入欄位" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://km-ap.asus.com/uploads/PhotoLibrarys/e16a88c8-bcc4-4dcb-bc7f-fe0809f723b5/20250303171543147_bit3a.jpg"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>BitLocker 復原畫面：Recovery key ID 與金鑰輸入欄位。圖片內識別碼只是範例，不是這台筆電的金鑰<br/><span class="source">來源：<a href="https://www.asus.com.cn/support/faq/1042922/" rel="noopener noreferrer" target="_blank">ASUS 官方</a> · <a href="https://km-ap.asus.com/uploads/PhotoLibrarys/e16a88c8-bcc4-4dcb-bc7f-fe0809f723b5/20250303171543147_bit3a.jpg" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="B4" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <p class="nextline"><a class="next route10" href="#win10">Windows 10 重設 ›</a> <a class="next secondary route7" href="#win7">Windows 7 還原 ›</a></p>
+            </section>
+            <section class="section os10" id="win10">
+                <div class="section-head">
+                    <div class="section-os">Windows 10 <span>· 方法一</span></div>
+                    <h2>從設定重設電腦</h2>
+                    <p class="sub">可以正常登入 Windows 10 時，使用此方法。</p>
+                </div>
+                <p class="note"><strong>接上電源。</strong> 重設時請勿強制關機。</p>
+                <article class="step" id="step-10-1">
+                    <div class="step-head">
+                        <span class="step-num">10-1</span>
+                        <h3>進入復原設定</h3>
+                    </div>
+                    <div class="path">
+                        <span class="pathpart"><b>開始</b><small lang="en">Start</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>設定</b><small lang="en">Settings</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>更新與安全性</b><small lang="en">Update &amp; Security</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>復原</b><small lang="en">Recovery</small></span>
+                    </div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>開始使用</strong><span class="english" lang="en">Get started</span><p>在 Reset this PC（重設此電腦）區塊內點選。</p></div></div>
+                    <p>也可在開始選單搜尋「重設此電腦」或「Reset this PC」，點選搜尋結果。</p>
+                    <figure class="shot">
+                        <a aria-label="Windows 10 Recovery 頁面，Get started 按鈕" class="image-link" href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2020/08/windows-10-reset-pc-option.webp?quality=78&amp;resize=827%2C338&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank"><img alt="Windows 10 Recovery 頁面，Get started 按鈕" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2020/08/windows-10-reset-pc-option.webp?quality=78&amp;resize=827%2C338&amp;ssl=1&amp;strip=all"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>Windows 10 Recovery 頁面，Get started 按鈕<br/><span class="source">來源：<a href="https://pureinfotech.com/reset-pc-removing-everything-windows-10/" rel="noopener noreferrer" target="_blank">Pureinfotech</a> · <a href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2020/08/windows-10-reset-pc-option.webp?quality=78&amp;resize=827%2C338&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="10-1" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-10-2">
+                    <div class="step-head">
+                        <span class="step-num">10-2</span>
+                        <h3>移除所有項目</h3>
+                    </div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>移除所有項目</strong><span class="english" lang="en">Remove everything</span><p>移除原使用者帳號、個人檔案、應用程式和設定。</p></div></div>
+                    <div class="avoid"><span aria-hidden="true">✕</span> 不要選：<b>保留我的檔案</b> <span lang="en">Keep my files</span></div>
+                    <figure class="shot">
+                        <a aria-label="選擇下方 Remove everything" class="image-link" href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2020/08/windows-10-factory-reset-remove-everything.webp?quality=78&amp;resize=682%2C456&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank"><img alt="選擇下方 Remove everything" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2020/08/windows-10-factory-reset-remove-everything.webp?quality=78&amp;resize=682%2C456&amp;ssl=1&amp;strip=all"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>選擇下方 Remove everything<br/><span class="source">來源：<a href="https://pureinfotech.com/reset-pc-removing-everything-windows-10/" rel="noopener noreferrer" target="_blank">Pureinfotech</a> · <a href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2020/08/windows-10-factory-reset-remove-everything.webp?quality=78&amp;resize=682%2C456&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="10-2" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-10-3">
+                    <div class="step-head">
+                        <span class="step-num">10-3</span>
+                        <h3>選擇重新安裝方式</h3>
+                    </div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>雲端下載</strong><span class="english" lang="en">Cloud download</span><p>若有穩定網路，從 Microsoft 下載安裝檔。</p></div></div>
+                    <p>如果找不到此選項、網路無法使用，或雲端下載失敗，可以選 Local reinstall（本機重新安裝）。舊版本可能直接進入下一步。</p>
+                    <figure class="shot">
+                        <a aria-label="Cloud download（上方）；Local reinstall（下方）" class="image-link" href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2020/08/windows-10-reset-cloud-download.webp?quality=78&amp;resize=682%2C456&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank"><img alt="Cloud download（上方）；Local reinstall（下方）" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2020/08/windows-10-reset-cloud-download.webp?quality=78&amp;resize=682%2C456&amp;ssl=1&amp;strip=all"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>Cloud download（上方）；Local reinstall（下方）<br/><span class="source">來源：<a href="https://pureinfotech.com/reset-pc-removing-everything-windows-10/" rel="noopener noreferrer" target="_blank">Pureinfotech</a> · <a href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2020/08/windows-10-reset-cloud-download.webp?quality=78&amp;resize=682%2C456&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="10-3" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-10-4">
+                    <div class="step-head">
+                        <span class="step-num">10-4</span>
+                        <h3>打開變更設定</h3>
+                    </div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>變更設定</strong><span class="english" lang="en">Change settings</span><p>進入 Additional settings（其他設定）後點此連結，不要直接按下一步。</p></div></div>
+                    <figure class="shot">
+                        <a aria-label="Additional settings 頁面：Change settings 連結" class="image-link" href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2020/08/cloud-download-settings.webp?quality=78&amp;resize=682%2C456&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank"><img alt="Additional settings 頁面：Change settings 連結" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2020/08/cloud-download-settings.webp?quality=78&amp;resize=682%2C456&amp;ssl=1&amp;strip=all"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>Additional settings 頁面：Change settings 連結。圖中目前預設是不清理磁碟，必須更改<br/><span class="source">來源：<a href="https://pureinfotech.com/reset-pc-removing-everything-windows-10/" rel="noopener noreferrer" target="_blank">Pureinfotech</a> · <a href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2020/08/cloud-download-settings.webp?quality=78&amp;resize=682%2C456&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="10-4" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-10-5">
+                    <div class="step-head">
+                        <span class="step-num">10-5</span>
+                        <h3>設定清除所有資料</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>英文選項</th>
+                                <th>中文</th>
+                                <th>設定</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Clean data?</td>
+                                <td>清理資料？</td>
+                                <td class="good">Yes／是</td>
+                            </tr>
+                            <tr>
+                                <td>Delete files from all drives?</td>
+                                <td>刪除所有磁碟機的檔案？</td>
+                                <td class="good">Yes, all drives／是，所有磁碟機</td>
+                            </tr>
+                            <tr>
+                                <td>Download Windows?</td>
+                                <td>下載 Windows？</td>
+                                <td class="good">Yes／是（雲端下載時）</td>
+                            </tr>
+                            <tr>
+                                <td>Restore preinstalled apps?</td>
+                                <td>還原預先安裝的應用程式？</td>
+                                <td>No／否（若出現）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>若只有一個可清除的磁碟，可能不會顯示 all drives 選項。設定完成後點 Confirm（確認），再點 Next（下一步）。</p>
+                    <figure class="shot">
+                        <a aria-label="Clean data、Delete files from all drives、Download Windows 均設定為 Yes" class="image-link" href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2020/08/windows-10-cloud-download-reset-clean-all-drives.webp?quality=78&amp;resize=682%2C456&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank"><img alt="Clean data、Delete files from all drives、Download Windows 均設定為 Yes" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2020/08/windows-10-cloud-download-reset-clean-all-drives.webp?quality=78&amp;resize=682%2C456&amp;ssl=1&amp;strip=all"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>Clean data、Delete files from all drives、Download Windows 均設定為 Yes<br/><span class="source">來源：<a href="https://pureinfotech.com/reset-pc-removing-everything-windows-10/" rel="noopener noreferrer" target="_blank">Pureinfotech</a> · <a href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2020/08/windows-10-cloud-download-reset-clean-all-drives.webp?quality=78&amp;resize=682%2C456&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="10-5" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-10-6">
+                    <div class="step-head">
+                        <span class="step-num">10-6</span>
+                        <h3>較舊 Windows 10：如果沒有變更設定</h3>
+                    </div>
+                    <p>只有在看到下列畫面時才需操作；若已完成上一個步驟，直接跳到下一步。</p>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>所有磁碟機</strong><span class="english" lang="en">All drives</span><p>若詢問要清除哪些磁碟，不要選僅安裝 Windows 的磁碟。</p></div></div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>完整清理磁碟機</strong><span class="english" lang="en">Fully clean the drive / Remove files and clean the drive</span></div></div>
+                    <div class="avoid"><span aria-hidden="true">✕</span> 不要選：<b>只移除我的檔案</b> <span lang="en">Just remove my files</span></div>
+                    <figure class="shot">
+                        <a aria-label="較舊版清理選項：選擇下方 Fully clean the drive" class="image-link" href="https://www.4winkey.com/images/article/windows-10/fully-clean-drive.jpg" rel="noopener noreferrer" target="_blank"><img alt="較舊版清理選項：選擇下方 Fully clean the drive" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://www.4winkey.com/images/article/windows-10/fully-clean-drive.jpg"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>較舊版清理選項：選擇下方 Fully clean the drive<br/><span class="source">來源：<a href="https://www.4winkey.com/windows-10/how-to-factory-reset-windows-10-and-remove-all-data.html" rel="noopener noreferrer" target="_blank">4WinKey</a> · <a href="https://www.4winkey.com/images/article/windows-10/fully-clean-drive.jpg" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="10-6" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-10-7">
+                    <div class="step-head">
+                        <span class="step-num">10-7</span>
+                        <h3>確認後開始重設</h3>
+                    </div>
+                    <p>在 Ready to reset this PC（準備重設此電腦）畫面核對將移除帳號、檔案和應用程式。若有額外磁碟，確認已選擇全部磁碟；若不確定，返回上一頁。</p>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>重設</strong><span class="english" lang="en">Reset</span></div></div>
+                    <div class="note">接下來不要手動關機。等電腦自行重開機並進入 Windows 初始設定。</div>
+                    <figure class="shot">
+                        <a aria-label="Ready to reset this PC：最後確認畫面" class="image-link" href="https://cdn.mos.cms.futurecdn.net/T296kDcEJR5qefWrYbBZVc.jpg" rel="noopener noreferrer" target="_blank"><img alt="Ready to reset this PC：最後確認畫面" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://cdn.mos.cms.futurecdn.net/T296kDcEJR5qefWrYbBZVc.jpg"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>Ready to reset this PC：最後確認畫面<br/><span class="source">來源：<a href="https://www.windowscentral.com/what-do-selling-your-old-pc" rel="noopener noreferrer" target="_blank">Windows Central</a> · <a href="https://cdn.mos.cms.futurecdn.net/T296kDcEJR5qefWrYbBZVc.jpg" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="10-7" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <p class="nextline"><a class="next" href="#finish">完成重設及關機 ›</a> <a class="next secondary" href="#win10alt">無法重設時 ›</a></p>
+            </section>
+            <section class="section os10" id="win10alt">
+                <div class="section-head">
+                    <div class="section-os">Windows 10 <span>· 方法二</span></div>
+                    <h2>從修復環境重設電腦</h2>
+                    <p class="sub">無法正常登入 Windows 10 時，使用此方法。</p>
+                </div>
+                <article class="step" id="step-R1">
+                    <div class="step-head">
+                        <span class="step-num">R1</span>
+                        <h3>從登入畫面進入修復環境</h3>
+                    </div>
+                    <p>若能看到 Windows 登入畫面，點右下角 Power（電源）。按住鍵盤 Shift 鍵，同時點 Restart（重新啟動）；出現藍色 Choose an option 畫面再放開。</p>
+                    <p>若電腦已進入 Automatic Repair（自動修復），點 Advanced options（進階選項）。若兩者皆無法出現，請停止並聯繫原擁有者，不要反覆強制關機。</p>
+                    <p class="missing">畫面因版本而異，請參考：　<a href="https://www.asus.com/us/support/faq/1044563/" rel="noopener noreferrer" target="_blank">ASUS 官方圖文教學</a></p>
+                    <label class="check"><input data-step="R1" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-R2">
+                    <div class="step-head">
+                        <span class="step-num">R2</span>
+                        <h3>點選疑難排解與重設</h3>
+                    </div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>疑難排解</strong><span class="english" lang="en">Troubleshoot</span></div></div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>重設此電腦</strong><span class="english" lang="en">Reset this PC</span></div></div>
+                    <figure class="shot">
+                        <a aria-label="Choose an option：點選 Troubleshoot" class="image-link" href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2021/08/windows-11-boot-troubleshoot-option.jpg?quality=78&amp;resize=827%2C407&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank"><img alt="Choose an option：點選 Troubleshoot" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2021/08/windows-11-boot-troubleshoot-option.jpg?quality=78&amp;resize=827%2C407&amp;ssl=1&amp;strip=all"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>Choose an option：點選 Troubleshoot<br/><span class="source">來源：<a href="https://pureinfotech.com/reset-pc-removing-everything-windows-10/" rel="noopener noreferrer" target="_blank">Pureinfotech</a> · <a href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2021/08/windows-11-boot-troubleshoot-option.jpg?quality=78&amp;resize=827%2C407&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <figure class="shot">
+                        <a aria-label="Troubleshoot：點選 Reset this PC" class="image-link" href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2021/08/windows-11-boot-reset-this-pc.jpg?quality=78&amp;resize=827%2C305&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank"><img alt="Troubleshoot：點選 Reset this PC" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2021/08/windows-11-boot-reset-this-pc.jpg?quality=78&amp;resize=827%2C305&amp;ssl=1&amp;strip=all"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>Troubleshoot：點選 Reset this PC。此修復環境介面在 Windows 10 與 11 相近<br/><span class="source">來源：<a href="https://pureinfotech.com/reset-pc-removing-everything-windows-10/" rel="noopener noreferrer" target="_blank">Pureinfotech</a> · <a href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2021/08/windows-11-boot-reset-this-pc.jpg?quality=78&amp;resize=827%2C305&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="R2" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-R3">
+                    <div class="step-head">
+                        <span class="step-num">R3</span>
+                        <h3>移除全部資料與完整清理</h3>
+                    </div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>移除所有項目</strong><span class="english" lang="en">Remove everything</span></div></div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>所有磁碟機</strong><span class="english" lang="en">All drives</span><p>若有出現磁碟範圍選項。</p></div></div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>完整清理磁碟機</strong><span class="english" lang="en">Fully clean the drive</span></div></div>
+                    <p>若出現復原金鑰要求，回到 <a href="#bitlocker">BitLocker 檢查章節</a>。</p>
+                    <figure class="shot">
+                        <a aria-label="修復環境：選擇 Remove everything" class="image-link" href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2021/08/advanced-startup-remove-everything-windows-11.jpg?quality=78&amp;resize=827%2C336&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank"><img alt="修復環境：選擇 Remove everything" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2021/08/advanced-startup-remove-everything-windows-11.jpg?quality=78&amp;resize=827%2C336&amp;ssl=1&amp;strip=all"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>修復環境：選擇 Remove everything<br/><span class="source">來源：<a href="https://pureinfotech.com/reset-pc-removing-everything-windows-10/" rel="noopener noreferrer" target="_blank">Pureinfotech</a> · <a href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2021/08/advanced-startup-remove-everything-windows-11.jpg?quality=78&amp;resize=827%2C336&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <figure class="shot">
+                        <a aria-label="選擇 Fully clean the drive" class="image-link" href="https://www.4winkey.com/images/article/windows-10/fully-clean-drive.jpg" rel="noopener noreferrer" target="_blank"><img alt="選擇 Fully clean the drive" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://www.4winkey.com/images/article/windows-10/fully-clean-drive.jpg"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>選擇 Fully clean the drive<br/><span class="source">來源：<a href="https://www.4winkey.com/windows-10/how-to-factory-reset-windows-10-and-remove-all-data.html" rel="noopener noreferrer" target="_blank">4WinKey</a> · <a href="https://www.4winkey.com/images/article/windows-10/fully-clean-drive.jpg" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="R3" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-R4">
+                    <div class="step-head">
+                        <span class="step-num">R4</span>
+                        <h3>選擇安裝方式並重設</h3>
+                    </div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>雲端下載</strong><span class="english" lang="en">Cloud download</span><p>有網路時優先選擇；否則可選 Local reinstall（本機重新安裝）。</p></div></div>
+                    <p>按 Reset（重設）開始，完成後選擇「完成重設及關機」。不同版本的選項順序可能不同，但清除範圍與完整清理設定應保持一致。</p>
+                    <figure class="shot">
+                        <a aria-label="修復環境：Cloud download / Local reinstall" class="image-link" href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2021/08/windows-11-cloud-download-local-reinstall-boot-option.jpg?quality=78&amp;resize=827%2C345&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank"><img alt="修復環境：Cloud download / Local reinstall" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2021/08/windows-11-cloud-download-local-reinstall-boot-option.jpg?quality=78&amp;resize=827%2C345&amp;ssl=1&amp;strip=all"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>修復環境：Cloud download / Local reinstall。如果畫面沒有此選項，可依系統既有方式安裝<br/><span class="source">來源：<a href="https://pureinfotech.com/reset-pc-removing-everything-windows-10/" rel="noopener noreferrer" target="_blank">Pureinfotech</a> · <a href="https://i0.wp.com/pureinfotech.com/wp-content/uploads/2021/08/windows-11-cloud-download-local-reinstall-boot-option.jpg?quality=78&amp;resize=827%2C345&amp;ssl=1&amp;strip=all" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="R4" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <p class="nextline"><a class="next" href="#finish">完成重設及關機 ›</a></p>
+            </section>
+            <section class="section os7" id="win7">
+                <div class="section-head">
+                    <div class="section-os">Windows 7 <span>· 方法一</span></div>
+                    <h2>ASUS 原廠還原</h2>
+                    <p class="sub">適用保有原廠復原分割區的舊款 ASUS 筆電。</p>
+                </div>
+                <div class="warning"><b>重要：</b>Windows 7 原廠還原並不等於安全抹除。它通常只還原選取的硬碟，其他實體硬碟可能仍有資料；若需要確保舊資料難以復原，請由熟悉電腦的人進行磁碟安全清除與重新安裝。</div>
+                <article class="step" id="step-7-1">
+                    <div class="step-head">
+                        <span class="step-num">7-1</span>
+                        <h3>關機後按 F9</h3>
+                    </div>
+                    <p>在 Windows 7 開始選單點 Shut down（關機）。電腦完全關機後，按電源鍵開機，立即連續按鍵盤上方的 <kbd>F9</kbd>，直到出現還原畫面。</p>
+                    <p>若直接進入原本的 Windows，請改走 <a href="#win7alt">控制台備用方式</a>，不要修改 BIOS。</p>
+                    <figure class="shot">
+                        <a aria-label="F9 按鍵位置" class="image-link" href="https://www.dra-3c.com/plugin/ce1/ckfinder/userfiles/images/article/asus-laptop-repair/2-ways-take-you-to-easily-restore-settings-of-asus-notebooks/press-f9-9.png" rel="noopener noreferrer" target="_blank"><img alt="F9 按鍵位置" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://www.dra-3c.com/plugin/ce1/ckfinder/userfiles/images/article/asus-laptop-repair/2-ways-take-you-to-easily-restore-settings-of-asus-notebooks/press-f9-9.png"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>F9 按鍵位置。第三方鍵盤圖解，非 Windows 截圖；不同鍵盤配置可能有差異<br/><span class="source">來源：<a href="https://www.dra-3c.com/article/asus-laptop-repair-blog/2-ways-take-you-to-easily-restore-settings-of-asus-notebooks" rel="noopener noreferrer" target="_blank">Dr.A</a> · <a href="https://www.dra-3c.com/plugin/ce1/ckfinder/userfiles/images/article/asus-laptop-repair/2-ways-take-you-to-easily-restore-settings-of-asus-notebooks/press-f9-9.png" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="7-1" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-7-2">
+                    <div class="step-head">
+                        <span class="step-num">7-2</span>
+                        <h3>選擇 Windows Setup</h3>
+                    </div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>Windows 安裝程式（已啟用 EMS）</strong><span class="english" lang="en">Windows Setup [EMS Enabled]</span><p>若出現 Windows Boot Manager（Windows 開機管理程式），選取此列並按 Enter。若直接進入 ASUS 還原精靈，跳到下一步。</p></div></div>
+                    <figure class="shot">
+                        <a aria-label="Windows Boot Manager：Windows Setup [EMS Enabled]" class="image-link" href="https://4ddig.tenorshare.com/images/windows-fix/how-to-reset-your-laptop-to-factory-settings-asus.jpg?h=396&amp;w=601" rel="noopener noreferrer" target="_blank"><img alt="Windows Boot Manager：Windows Setup [EMS Enabled]" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://4ddig.tenorshare.com/images/windows-fix/how-to-reset-your-laptop-to-factory-settings-asus.jpg?h=396&amp;w=601"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>Windows Boot Manager：Windows Setup [EMS Enabled]<br/><span class="source">來源：<a href="https://4ddig.tenorshare.com/windows-fix/how-to-reset-your-asus-laptop-to-factory-settings.html" rel="noopener noreferrer" target="_blank">4DDiG</a> · <a href="https://4ddig.tenorshare.com/images/windows-fix/how-to-reset-your-laptop-to-factory-settings-asus.jpg?h=396&amp;w=601" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="7-2" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-7-3">
+                    <div class="step-head">
+                        <span class="step-num">7-3</span>
+                        <h3>選擇語言並進入 ASUS 精靈</h3>
+                    </div>
+                    <div class="path">
+                        <span class="pathpart"><b>選擇語言</b><small lang="en">Select Language</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>下一步</b><small lang="en">Next</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>ASUS 預載精靈</b><small lang="en">ASUS Preload Wizard</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>下一步</b><small lang="en">Next</small></span>
+                    </div>
+                    <p>選擇熟悉的語言；閱讀原廠提示，點下一步。若實際畫面不是 ASUS Preload Wizard，不要隨意選擇，先詢問原擁有者。</p>
+                    <p class="missing">語言選擇畫面因型號而異，請參考：　<a href="https://www.manualowl.com/m/Asus/X53U/Manual/331586?page=87" rel="noopener noreferrer" target="_blank">ASUS X53U 使用手冊（英文）</a></p>
+                    <label class="check"><input data-step="7-3" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-7-4">
+                    <div class="step-head">
+                        <span class="step-num">7-4</span>
+                        <h3>選擇整個硬碟</h3>
+                    </div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>將 Windows 還原至整個硬碟</strong><span class="english" lang="en">Recover Windows to entire HD</span><p>優先選第二項，清除該硬碟原有分割區並建立新的 C 槽。</p></div></div>
+                    <p>第三項 Recover Windows to entire HD with two partitions（將 Windows 還原至整個硬碟並建立兩個分割區）也會重建該硬碟的 C、D 槽。</p>
+                    <div class="avoid"><span aria-hidden="true">✕</span> 不要選：<b>只還原第一個分割區</b> <span lang="en">Recover Windows to first partition only</span></div>
+                    <p>確定選的是整顆硬碟後，點 Next（下一步）。若只有 Default Partition（預設分割區）等選項，先停止，不能假設 D 槽也會清除。</p>
+                    <figure class="shot">
+                        <a aria-label="ASUS Preload Wizard 英文介面：第二項 Recover Windows to entire HD" class="image-link" href="https://www.passfab.com/images/topics/laptop/format-c.jpg?h=600&amp;w=800" rel="noopener noreferrer" target="_blank"><img alt="ASUS Preload Wizard 英文介面：第二項 Recover Windows to entire HD" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://www.passfab.com/images/topics/laptop/format-c.jpg?h=600&amp;w=800"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>ASUS Preload Wizard：選第二項 Recover Windows to entire HD。圖片為相同選項的舊版還原精靈。<br/><span class="source">來源：<a href="https://www.passfab.com/laptop/asus-windows-8-laptop.html" rel="noopener noreferrer" target="_blank">PassFab</a> · <a href="https://www.passfab.com/images/topics/laptop/format-c.jpg?h=600&amp;w=800" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <figure class="shot">
+                        <a aria-label="ASUS 原廠 Win7/8 還原精靈：第二項為清除所有分割區" class="image-link" href="https://dlcdnimgs.asus.com/websites/KR/aboutasus/11.jpg" rel="noopener noreferrer" target="_blank"><img alt="ASUS 原廠 Win7/8 還原精靈：第二項為清除所有分割區" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://dlcdnimgs.asus.com/websites/KR/aboutasus/11.jpg"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>ASUS 原廠還原精靈（韓文）：應選第二項，不要選第一項。<br/><span class="source">來源：<a href="https://www.asus.com/kr/Static_WebPage/window_recovery/" rel="noopener noreferrer" target="_blank">ASUS 韓國官方</a> · <a href="https://dlcdnimgs.asus.com/websites/KR/aboutasus/11.jpg" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="7-4" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-7-5">
+                    <div class="step-head">
+                        <span class="step-num">7-5</span>
+                        <h3>開始原廠還原</h3>
+                    </div>
+                    <p>依畫面點 Next（下一步）、Recover（復原）或 Yes（是），若有顯示 Finish（完成）或 Reboot（重新開機），依原廠提示操作。還原過程可能多次重新啟動。</p>
+                    <div class="note">不要在還原過程強制關機；如果報錯或沒有提供整顆硬碟選項，先停止並聯絡原擁有者。</div>
+                    <p class="missing">確認及進度畫面因型號而異，請參考：　<a href="https://www.manualowl.com/m/Asus/X53U/Manual/331586?page=87" rel="noopener noreferrer" target="_blank">ASUS 原廠手冊轉載</a></p>
+                    <label class="check"><input data-step="7-5" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <p class="nextline"><a class="next" href="#finish">完成重設及關機 ›</a> <a class="next secondary" href="#win7alt">F9 無效：控制台方式 ›</a></p>
+            </section>
+            <section class="section os7" id="win7alt">
+                <div class="section-head">
+                    <div class="section-os">Windows 7 <span>· 方法二</span></div>
+                    <h2>從控制台還原電腦</h2>
+                    <p class="sub">開機按 F9 無效時，使用此方法。</p>
+                </div>
+                <article class="step" id="step-C1">
+                    <div class="step-head">
+                        <span class="step-num">C1</span>
+                        <h3>進入控制台</h3>
+                    </div>
+                    <div class="path">
+                        <span class="pathpart"><b>開始</b><small lang="en">Start</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>控制台</b><small lang="en">Control Panel</small></span>
+                        <span aria-hidden="true" class="arrow">›</span>
+                        <span class="pathpart"><b>系統及安全性</b><small lang="en">System and Security</small></span>
+                    </div>
+                    <figure class="shot">
+                        <a aria-label="Windows 7 控制台：點 System and Security" class="image-link" href="https://www.top-password.com/blog/wp-content/uploads/2015/01/control-panel1.png" rel="noopener noreferrer" target="_blank"><img alt="Windows 7 控制台：點 System and Security" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://www.top-password.com/blog/wp-content/uploads/2015/01/control-panel1.png"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>Windows 7 控制台：點 System and Security<br/><span class="source">來源：<a href="https://www.top-password.com/blog/how-to-reset-windows-7-to-factory-settings-without-install-disc/" rel="noopener noreferrer" target="_blank">Top Password</a> · <a href="https://www.top-password.com/blog/wp-content/uploads/2015/01/control-panel1.png" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="C1" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-C2">
+                    <div class="step-head">
+                        <span class="step-num">C2</span>
+                        <h3>開啟備份與還原</h3>
+                    </div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>備份與還原</strong><span class="english" lang="en">Backup and Restore</span></div></div>
+                    <figure class="shot">
+                        <a aria-label="System and Security：點 Backup and Restore" class="image-link" href="https://www.top-password.com/blog/wp-content/uploads/2015/01/system-and-security.png" rel="noopener noreferrer" target="_blank"><img alt="System and Security：點 Backup and Restore" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://www.top-password.com/blog/wp-content/uploads/2015/01/system-and-security.png"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>System and Security：點 Backup and Restore<br/><span class="source">來源：<a href="https://www.top-password.com/blog/how-to-reset-windows-7-to-factory-settings-without-install-disc/" rel="noopener noreferrer" target="_blank">Top Password</a> · <a href="https://www.top-password.com/blog/wp-content/uploads/2015/01/system-and-security.png" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="C2" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-C3">
+                    <div class="step-head">
+                        <span class="step-num">C3</span>
+                        <h3>進入復原設定</h3>
+                    </div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>復原系統設定或您的電腦</strong><span class="english" lang="en">Recover system settings or your computer</span></div></div>
+                    <figure class="shot">
+                        <a aria-label="Backup and Restore：點下方復原連結" class="image-link" href="https://www.top-password.com/blog/wp-content/uploads/2015/01/backup-and-restore.png" rel="noopener noreferrer" target="_blank"><img alt="Backup and Restore：點下方復原連結" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://www.top-password.com/blog/wp-content/uploads/2015/01/backup-and-restore.png"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>Backup and Restore：點下方復原連結<br/><span class="source">來源：<a href="https://www.top-password.com/blog/how-to-reset-windows-7-to-factory-settings-without-install-disc/" rel="noopener noreferrer" target="_blank">Top Password</a> · <a href="https://www.top-password.com/blog/wp-content/uploads/2015/01/backup-and-restore.png" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="C3" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-C4">
+                    <div class="step-head">
+                        <span class="step-num">C4</span>
+                        <h3>選擇進階復原方法</h3>
+                    </div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>進階復原方法</strong><span class="english" lang="en">Advanced recovery methods</span></div></div>
+                    <div class="avoid"><span aria-hidden="true">✕</span> 不要選：<b>開啟系統還原</b> <span lang="en">Open System Restore</span></div>
+                    <figure class="shot">
+                        <a aria-label="Recovery：Advanced recovery methods 連結" class="image-link" href="https://www.top-password.com/blog/wp-content/uploads/2015/01/recovery.png" rel="noopener noreferrer" target="_blank"><img alt="Recovery：Advanced recovery methods 連結" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://www.top-password.com/blog/wp-content/uploads/2015/01/recovery.png"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>Recovery：Advanced recovery methods 連結<br/><span class="source">來源：<a href="https://www.top-password.com/blog/how-to-reset-windows-7-to-factory-settings-without-install-disc/" rel="noopener noreferrer" target="_blank">Top Password</a> · <a href="https://www.top-password.com/blog/wp-content/uploads/2015/01/recovery.png" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="C4" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-C5">
+                    <div class="step-head">
+                        <span class="step-num">C5</span>
+                        <h3>選擇恢復原廠狀態</h3>
+                    </div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>將電腦恢復至出廠狀態</strong><span class="english" lang="en">Return your computer to factory condition</span></div></div>
+                    <div class="warning">如果沒有這個選項，只有 Reinstall Windows (requires Windows installation disc)（重新安裝 Windows，需要安裝光碟），請停止。若使用一般重新安裝，有可能留下 Windows.old 或其他磁碟資料。</div>
+                    <figure class="shot">
+                        <a aria-label="Advanced Recovery Methods：點 Return your computer to factory condition" class="image-link" href="https://www.doyourdata.com/images/guide-tips/win7-return-to-factory-condition5.png" rel="noopener noreferrer" target="_blank"><img alt="Advanced Recovery Methods：點 Return your computer to factory condition" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://www.doyourdata.com/images/guide-tips/win7-return-to-factory-condition5.png"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>Advanced Recovery Methods：點 Return your computer to factory condition<br/><span class="source">來源：<a href="https://www.doyourdata.com/erase-data/factory-reset-windows-7.html" rel="noopener noreferrer" target="_blank">DoYourData</a> · <a href="https://www.doyourdata.com/images/guide-tips/win7-return-to-factory-condition5.png" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="C5" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-C6">
+                    <div class="step-head">
+                        <span class="step-num">C6</span>
+                        <h3>略過備份並重新開機</h3>
+                    </div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>略過</strong><span class="english" lang="en">Skip</span><p>若系統詢問是否備份，選 Skip。</p></div></div>
+                    <div class="pick"><span aria-hidden="true" class="tick">✓</span><div><strong>重新啟動</strong><span class="english" lang="en">Restart</span><p>若進入原廠還原精靈，回到 Windows 7 原廠還原的整個硬碟選項。若不提供清除全部磁碟選項，停止並詢問原擁有者。</p></div></div>
+                    <figure class="shot">
+                        <a aria-label="User File Backup：點右下 Skip" class="image-link" href="https://www.top-password.com/blog/wp-content/uploads/2015/01/user-file-backup.png" rel="noopener noreferrer" target="_blank"><img alt="User File Backup：點右下 Skip" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://www.top-password.com/blog/wp-content/uploads/2015/01/user-file-backup.png"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>User File Backup：點右下 Skip<br/><span class="source">來源：<a href="https://www.top-password.com/blog/how-to-reset-windows-7-to-factory-settings-without-install-disc/" rel="noopener noreferrer" target="_blank">Top Password</a> · <a href="https://www.top-password.com/blog/wp-content/uploads/2015/01/user-file-backup.png" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <figure class="shot">
+                        <a aria-label="Restart：點重新啟動" class="image-link" href="https://www.top-password.com/blog/wp-content/uploads/2015/01/restart.png" rel="noopener noreferrer" target="_blank"><img alt="Restart：點重新啟動" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://www.top-password.com/blog/wp-content/uploads/2015/01/restart.png"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                        <figcaption>Restart：點重新啟動<br/><span class="source">來源：<a href="https://www.top-password.com/blog/how-to-reset-windows-7-to-factory-settings-without-install-disc/" rel="noopener noreferrer" target="_blank">Top Password</a> · <a href="https://www.top-password.com/blog/wp-content/uploads/2015/01/restart.png" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                    </figure>
+                    <label class="check"><input data-step="C6" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <p class="nextline"><a class="next" href="#win7">回到 ASUS 原廠還原 ›</a> <a class="next secondary" href="#finish">已完成還原 ›</a></p>
+            </section>
+            <section class="section" id="finish">
+                <div class="section-head">
+                    <h2>完成重設及關機</h2>
+                    <p class="sub">看到 Windows 初始設定畫面後即可關機。</p>
+                </div>
+                <article class="step" id="step-F1">
+                    <div class="step-head">
+                        <span class="step-num">F1</span>
+                        <h3>辨認初始設定畫面</h3>
+                    </div>
+                    <p>Windows 10 通常會要求選擇國家／地區或鍵盤；Windows 7 可能要求建立使用者名稱。到這裡代表已進入新的設定流程。</p>
+                    <p><b>不要登入帳號，也不需要建立新帳號。</b> 如果直接進入舊桌面或仍有舊帳號，請通知原擁有者。</p>
+                    <div class="two">
+                        <figure class="shot">
+                            <a aria-label="Windows 10：初始地區選擇畫面" class="image-link" href="https://us.v-cdn.net/6031942/uploads/editor/sv/xblpxtpoonbi.png" rel="noopener noreferrer" target="_blank"><img alt="Windows 10：初始地區選擇畫面" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://us.v-cdn.net/6031942/uploads/editor/sv/xblpxtpoonbi.png"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                            <figcaption>Windows 10：初始地區選擇畫面。不要繼續按 Yes<br/><span class="source">來源：<a href="https://community.microcenter.com/kb/articles/76-how-to-set-up-windows-10-on-a-new-pc" rel="noopener noreferrer" target="_blank">Micro Center</a> · <a href="https://us.v-cdn.net/6031942/uploads/editor/sv/xblpxtpoonbi.png" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                        </figure>
+                        <figure class="shot">
+                            <a aria-label="Windows 7：Set Up Windows 建立使用者名稱" class="image-link" href="https://www.windowsreinstall.com/win7homepremium/windows7reinstallguides/images/indexf29.jpg" rel="noopener noreferrer" target="_blank"><img alt="Windows 7：Set Up Windows 建立使用者名稱" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('failed');this.parentElement.querySelector('.fallback').hidden=false" referrerpolicy="no-referrer" src="https://www.windowsreinstall.com/win7homepremium/windows7reinstallguides/images/indexf29.jpg"/><span class="fallback" hidden="">圖片無法顯示。點此查看原圖。</span></a>
+                            <figcaption>Windows 7：Set Up Windows 建立使用者名稱。不用填入帳號<br/><span class="source">來源：<a href="https://www.windowsreinstall.com/win7homepremium/windows7reinstallguides/indexfullpage.htm" rel="noopener noreferrer" target="_blank">Windows Reinstall</a> · <a href="https://www.windowsreinstall.com/win7homepremium/windows7reinstallguides/images/indexf29.jpg" rel="noopener noreferrer" target="_blank">開啟原圖</a></span></figcaption>
+                        </figure>
+                    </div>
+                    <label class="check"><input data-step="F1" type="checkbox"/>此步驟已完成</label>
+                </article>
+                <article class="step" id="step-F2">
+                    <div class="step-head">
+                        <span class="step-num">F2</span>
+                        <h3>安全關機</h3>
+                    </div>
+                    <p>若畫面有 Power（電源）圖示，點選後選 Shut down（關機）。若沒有電源選單，確認已停在初始設定畫面且沒有正在安裝或更新，再短按一次實體電源鍵，等待正常關機。</p>
+                    <p>若短按無反應或只進入睡眠，不要長按強制關機；停留在初始設定畫面。</p>
+                    <p class="missing">部分版本沒有電源圖示。　<a href="https://www.asus.com/us/support/faq/1013063/" rel="noopener noreferrer" target="_blank">ASUS 官方重設說明</a></p>
+                    <label class="check"><input data-step="F2" type="checkbox"/>此步驟已完成</label>
+                </article>
+            </section>
+            <section class="section" id="sources">
+                <div class="section-head">
+                    <h2>參考資料</h2>
+                </div>
+                <p>圖片需要網路連線。如果圖片無法顯示，可點下方來源連結。</p>
+                <p>畫面可能因 Windows 版本及 ASUS 型號而異。請以各步驟的中英文選項為準。</p>
+                <ul class="source-list">
+                    <li><a href="https://www.asus.com/us/support/faq/1013063/" rel="noopener noreferrer" target="_blank">ASUS 官方｜Windows 10/11 重設（英文）</a></li>
+                    <li><a href="https://www.asus.com/tw/support/faq/1013063/" rel="noopener noreferrer" target="_blank">ASUS 官方｜Windows 10/11 重設（繁體中文）</a></li>
+                    <li><a href="https://www.asus.com/global/support/faq/1008578/" rel="noopener noreferrer" target="_blank">ASUS 官方｜檢查 Windows 版本</a></li>
+                    <li><a href="https://www.asus.com/us/support/faq/1044341/" rel="noopener noreferrer" target="_blank">ASUS 官方｜裝置加密與 BitLocker</a></li>
+                    <li><a href="https://support.microsoft.com/en-us/windows/experience/backup-recovery/reset-your-pc" rel="noopener noreferrer" target="_blank">Microsoft｜重設電腦</a></li>
+                    <li><a href="https://support.microsoft.com/en-gb/windows/security/encryption/bitlocker-drive-encryption?nochrome=true" rel="noopener noreferrer" target="_blank">Microsoft｜BitLocker 磁碟機加密</a></li>
+                    <li><a href="https://support.microsoft.com/en-us/windows/security/encryption/find-your-bitlocker-recovery-key" rel="noopener noreferrer" target="_blank">Microsoft｜尋找 BitLocker 復原金鑰</a></li>
+                    <li><a href="https://www.manualowl.com/m/Asus/X53U/Manual/331586?page=87" rel="noopener noreferrer" target="_blank">ASUS X53U 使用手冊（ManualOwl 轉載）｜原廠還原</a></li>
+                    <li><a href="https://www.asus.com/kr/Static_WebPage/window_recovery/" rel="noopener noreferrer" target="_blank">ASUS 韓國｜Windows 7/8 還原照片</a></li>
+                    <li><a href="https://pureinfotech.com/reset-pc-removing-everything-windows-10/" rel="noopener noreferrer" target="_blank">Pureinfotech｜Windows 10 重設實際截圖</a></li>
+                    <li><a href="https://www.top-password.com/blog/how-to-reset-windows-7-to-factory-settings-without-install-disc/" rel="noopener noreferrer" target="_blank">Top Password｜Windows 7 控制台還原截圖</a></li>
+                    <li><a href="https://www.doyourdata.com/erase-data/factory-reset-windows-7.html" rel="noopener noreferrer" target="_blank">DoYourData｜Windows 7 原廠還原選項</a></li>
+                </ul>
+                <div class="warning"><b>安全提醒：</b>Windows 7 一般支援已於 2020/01/14 結束；Windows 10 一般支援已於 2025/10/14 結束（部分版本或適用 ESU 另有支援）。建議使用仍受支援的 Windows 版本。重設與原廠還原不保證達成專業資料抹除標準。</div>
+            </section>
+        </main>
+        <script>
+            (function () { var sections = [].slice.call(document.querySelectorAll('.section')); var nav = [].slice.call(document.querySelectorAll('[data-nav]')); function show() { var id = location.hash.slice(1) || 'start'; if (!sections.some(function (s) { return s.id === id; })) {
+                return;
+            } sections.forEach(function (s) { s.hidden = s.id !== id; }); nav.forEach(function (a) { var on = a.getAttribute('data-nav') === id; a.classList.toggle('active', on); if (on)
+                a.setAttribute('aria-current', 'page');
+            else
+                a.removeAttribute('aria-current'); }); window.scrollTo(0, 0); } window.addEventListener('hashchange', show); show(); var checks = [].slice.call(document.querySelectorAll('[data-step]')); var key = 'asus-reset-guide-checks-v5'; var saved = {}; try {
+                saved = JSON.parse(localStorage.getItem(key) || '{}');
+            }
+            catch (e) { } function update() { checks.forEach(function (c) { c.closest('.step').classList.toggle('done', c.checked); }); document.getElementById('progress').textContent = '已完成 ' + checks.filter(function (c) { return c.checked; }).length + ' 個步驟'; try {
+                localStorage.setItem(key, JSON.stringify(saved));
+            }
+            catch (e) { } } checks.forEach(function (c) { c.checked = !!saved[c.dataset.step]; c.addEventListener('change', function () { saved[c.dataset.step] = c.checked; update(); }); }); document.getElementById('clear').addEventListener('click', function () { if (confirm('清除所有步驟勾選紀錄？')) {
+                saved = {};
+                checks.forEach(function (c) { c.checked = false; });
+                update();
+            } }); document.getElementById('print').addEventListener('click', function () { window.print(); }); update(); })();
+        </script>
+    </body>
+</html>
